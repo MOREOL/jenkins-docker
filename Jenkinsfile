@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push karimsahebettaba/flask:$BUILD_NUMBER'
+                sh 'docker push karimsahebettaba/demo-app:$BUILD_NUMBER'
             }
         }
 }
