@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t karimsahebettaba/formation-devops:$BUILD_NUMBER .'
+                sh 'docker build -t olmoreau/formation_quality:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push karimsahebettaba/formation-devops:$BUILD_NUMBER'
+                sh 'docker push olmoreau/formation_quality:$BUILD_NUMBER'
             }
         }
 }
